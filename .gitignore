@@ -1,0 +1,5 @@
+input/*
+.idea/*
+*.zip
+__pycache__/
+playground.py
