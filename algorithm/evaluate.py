@@ -1,8 +1,6 @@
 from time import ctime
-
 import numpy as np
-
-from algorithm import naive_bayes as nb
+import naive_bayes as nb
 
 
 def classify(data, prob_classes, classes, classes_ratio):
@@ -101,7 +99,7 @@ def cal_cost_sensitive_measure(confusion_matrix, classes):
         accuracy = (tp+tn)/(tp+fn+fp+tn)
         precision = tp/(tp+fp)
         recall = tp/(tp+fn)
-        f_measure = 2 * fp / (2 * fp + fn + fp)
+        f_measure = 2 * tp / (2 * tp + fn + fp)
 
         result_item["accuracy"] = accuracy
         result_item["precision"] = precision

@@ -1,6 +1,6 @@
-from algorithm.evaluate import *
-from algorithm.naive_bayes import *
-from algorithm.io_utils import *
+from evaluate import *
+from naive_bayes import *
+from io_utils import *
 
 
 def run_one_loop(tr_data, tr_labels, splits, loop_num):
@@ -46,8 +46,8 @@ def main():
     print("==> Main app start at:", ctime())
 
     print("==> File reading phase start at:", ctime())
-    data_list = read_training_data('input/training_data.csv')
-    labels_list = read_training_labels('input/training_labels.csv')
+    data_list = read_training_data('../input/training_data.csv')
+    labels_list = read_training_labels('../input/training_labels.csv')
     print("<== File reading phase end at:", ctime())
 
     # check = check_entry_order(data_list, labels_list)
@@ -75,7 +75,6 @@ def main():
     print("confusion_matrix:", confusion_matrix/folds)
     sensitive_measure = cal_cost_sensitive_measure(confusion_matrix, classes)
     print("sensitive_measure:", sensitive_measure)
-
     print("<== Main app end at:", ctime())
 
 

@@ -1,9 +1,7 @@
 from time import ctime
-
-from algorithm.evaluate import classify
-from algorithm.naive_bayes import *
-
-from algorithm.io_utils import *
+from evaluate import classify
+from naive_bayes import *
+from io_utils import *
 
 
 def main():

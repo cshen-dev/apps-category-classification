@@ -54,3 +54,9 @@ def output_test_result(data, file_name):
         data_writer.writerows(data)
     return
 
+
+def output_print(data, file_name):
+    with open(file_name, 'w') as output:
+        output.write(data)
+    return
+
